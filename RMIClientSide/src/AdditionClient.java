@@ -7,9 +7,9 @@ public class AdditionClient {
 		AdditionInterface hello;
 		try{
 			System.setSecurityManager(new SecurityManager());
-			Registry r = LocateRegistry.getRegistry("localhost", 1099);
-			hello = (AdditionInterface) r.lookup("//localhost/ABC");
-			int result = hello.add(9, 12);
+			Registry r = LocateRegistry.getRegistry("10.0.0.115", 1099);
+			hello = (AdditionInterface) r.lookup("ABC");
+			int result = hello.add(56, 12);
 			System.out.println("Result from server: " + result);			
 		}catch (Exception e){
 			System.out.println("HelloClient exception: " + e);

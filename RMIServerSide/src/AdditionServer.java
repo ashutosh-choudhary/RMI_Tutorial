@@ -10,7 +10,7 @@ public class AdditionServer {
 		System.setSecurityManager(new SecurityManager());
 		Registry r = LocateRegistry.createRegistry(1099);
 		Addition Hello = new Addition();
-		r.rebind("//localhost/ABC", Hello);
+		r.rebind("ABC", Hello);
 		System.out.println("Addition Server is ready.");
 	}
 	catch(Exception e){
