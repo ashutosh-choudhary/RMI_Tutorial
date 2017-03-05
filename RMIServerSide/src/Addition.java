@@ -5,7 +5,7 @@ public class Addition extends UnicastRemoteObject implements AdditionInterface{
 	public Addition() throws RemoteException{super();}
 
 	public int add(int a, int b) throws RemoteException {
-		int result=a+b;
+		int result=a*b;
 		return result;
 	}
 }
